@@ -96,11 +96,11 @@
 			<div id="container" style="max-width:100%; height:auto; margin:15px auto 15px auto;">
 				<img id="picture" src="Front.png" id="picture" width="1300" style="border:1px solid blue;" usemap="#map"/>
 				<map name="map" id="map">	
-					  <area alt="Hall 2" title="Hall 1" href="https://manulao.github.io/ksrukgehall2/" coords="229,1115,586,1244" shape="rect">
-  					<area alt="Hall 3" title="Hall 2" href="https://manulao.github.io/ksrukgehall3/" coords="702,1115,1059,1244" shape="rect">
-  					<area alt="Hall 3A" title="Hall 3" href="https://manulao.github.io/ksrspielhall3A/" coords="230,1352,586,1486" shape="rect">
-  					<area alt="Hall 4" title="Hall 4" href="https://manulao.github.io/ksrspielhall4/" coords="699,1353,1061,1486" shape="rect">
-  					<area alt="Kickstarter Creator's List" title="Kickstarter Creator's List" href="https://manulao.github.io/ksrspiel/Essen%2024%20Kickstarter%20Creator's%20List.pdf" coords="229,1820,1064,1954" shape="rect">
+					<area alt="Hall 2" title="Hall 2" href="https://manulao.github.io/ksrukgehall2" coords="229,1250,583,1380" shape="rect">
+  					<area alt="Hall 3" title="Hall 3" href="https://manulao.github.io/ksrukgehall3" coords="702,1251,1058,1380" shape="rect">
+  					<area alt="Hall 3A" title="Hall 3A" href="https://manulao.github.io/ksrukgehall3A" coords="233,1531,587,1662" shape="rect">
+  					<area alt="Hall 4" title="Hall 4" href="https://manulao.github.io/ksrukgehall4" coords="705,1528,1062,1658" shape="rect">
+  					<area alt="Kickstarter Creator's List" title="Kickstarter Creator's List" href="https://manulao.github.io/ksrukge/UKGE%2025%20Kickstarter%20Creator's%20List.pdf" coords="229,1817,1065,1949" shape="rect">
 					
 				</map>
 			</div>
