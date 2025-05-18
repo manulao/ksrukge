@@ -1,0 +1,109 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="theme-color" content="#ffffff">
+	<meta name="viewport" content="width=device-width"/>
+	<title>Kickstarter Spiel</title>
+	<style>
+		.tooltip {
+			border:2px solid #f7eed7;
+			border-radius:4px;
+			padding:10px;
+			margin-bottom:10px;
+			margin-left:0px;
+			background-color:#f7eed7;
+			font:12px Verdana;
+			line-height:18px;
+			box-shadow: 0px 3px 10px grey;
+		}
+			a {
+				cursor:pointer;
+				color:blue;
+				text-align: center
+			}
+			a:hover {
+				color:black;
+			}
+			label {
+				display:inline-block;
+				width:250px;
+				text-align:right;
+				padding:5px;
+			}
+			a:link {
+				color:blue;
+				text-decoration: underline;
+			}
+	</style>
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.imagemapster.min.js"></script>
+	<script type="text/javascript">
+				$(document).ready(function() {
+			$('img').mapster({
+				fillOpacity: 0.5,
+				render_highlight: {
+					fillColor: 'f7eed7',
+					stroke: true,
+					strokeColor: 'f7eed7'
+				},
+								clickNavigate: true,
+								fadeInterval: 50,
+				showToolTip: true,
+				onClick: function (e) {
+					$('#coordinateslabel').hide();
+					$('#deletelabel').show();
+					var thisId = e.key;
+					thisId = thisId.replace('game-', '');
+					$('#existing').val(thisId);
+					console.log($('#existing').val());
+					$('#game').val(thisId);
+					$('#description').val($('#hd'+thisId).val());
+				},
+				toolTipContainer: '<div class="tooltip" style="text-align:left;max-width:200px;"></div>',
+				mapKey: 'data-key'});
+			});
+		var width = 1300;
+		var height = 2000;
+		var multiplier = 2;
+		function smaller(){
+			width = width/2;
+			height = height/2;
+			multiplier = multiplier*2;
+			$('#zoom').val(multiplier);
+			$('#container').animate({
+				width:width
+			}, 500, function() {});
+			$('img').mapster('resize',width,height,500);
+		}
+		function bigger(){
+			width = width*2;
+			height = height*2;
+			multiplier = multiplier/2;
+			$('#zoom').val(multiplier);
+			$('#container').animate({
+				width:width
+			}, 500, function() {});
+			$('img').mapster('resize',width,height,500);
+		}
+		
+			</script>
+</head>
+	<body style="text-align:center;background-color:#eff0f2;font:12px Verdana;">
+					<p style="font-size:20px;"></p>
+			<div id="container" style="max-width:100%; height:auto; margin:15px auto 15px auto;">
+				<img id="picture" src="Front.png" id="picture" width="1300" style="border:1px solid blue;" usemap="#map"/>
+				<map name="map" id="map">	
+					  <area alt="Hall 2" title="Hall 1" href="https://manulao.github.io/ksrukgehall2/" coords="229,1115,586,1244" shape="rect">
+  					<area alt="Hall 3" title="Hall 2" href="https://manulao.github.io/ksrukgehall3/" coords="702,1115,1059,1244" shape="rect">
+  					<area alt="Hall 3A" title="Hall 3" href="https://manulao.github.io/ksrspielhall3A/" coords="230,1352,586,1486" shape="rect">
+  					<area alt="Hall 4" title="Hall 4" href="https://manulao.github.io/ksrspielhall4/" coords="699,1353,1061,1486" shape="rect">
+  					<area alt="Kickstarter Creator's List" title="Kickstarter Creator's List" href="https://manulao.github.io/ksrspiel/Essen%2024%20Kickstarter%20Creator's%20List.pdf" coords="229,1820,1064,1954" shape="rect">
+					
+				</map>
+			</div>
+			</p>
+
+</html>
